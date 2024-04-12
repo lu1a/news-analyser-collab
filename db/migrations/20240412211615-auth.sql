@@ -56,18 +56,10 @@ CREATE TABLE IF NOT EXISTS session (
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     account_id INTEGER REFERENCES account(account_id) ON DELETE CASCADE
 );
-CREATE TABLE IF NOT EXISTS api_token (
-    api_token_id SERIAL PRIMARY KEY,
-    token TEXT UNIQUE NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    expires_at TIMESTAMPTZ,
-    account_id INTEGER REFERENCES account(account_id) ON DELETE CASCADE
-);
 
 -- TODO: add other oauth provider profile tables
 
 -- +migrate Down
-DROP TABLE IF EXISTS api_token;
 DROP TABLE IF EXISTS session;
 DROP TABLE IF EXISTS github_account_profile;
 DROP TABLE IF EXISTS account;
