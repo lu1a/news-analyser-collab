@@ -14,7 +14,8 @@ CREATE INDEX article_textsearch_idx ON article USING GIN (tsvector_content_desc)
 CREATE TABLE IF NOT EXISTS case (
     case_id SERIAL PRIMARY KEY,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    md_content TEXT
+    md_content TEXT,
+    published_at TIMESTAMPTZ -- our staff published this case on our site
 );
 CREATE TABLE IF NOT EXISTS account_case_map (
   account_id INTEGER REFERENCES account(account_id),
