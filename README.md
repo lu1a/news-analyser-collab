@@ -14,6 +14,13 @@ Say I have an org whose job it is to pump out a bunch of analyses based on their
 
 ## Setup & development
 ### Database
+You'll need to source a postgres database from somewhere.
+
+For example, you could run
+```bash
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+```
+
 Fill out a new file `.env` according to the fields in the `.env.example` file.
 Install sql-migrate with your favourite package manager.
 
