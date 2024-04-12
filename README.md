@@ -5,6 +5,9 @@ A group can log in, receive a DB table's worth of news data (from 3rd party), an
 - database tables for news articles from 3rd party, cases (outputs based on a handful of articles), notes (related to articles), article tags, users
 - login functionality (probably SSO)
 - UI to show articles and tag them
-- UI to create cases and pull in related articles
+- UI to create cases and pull in related articles, add notes, etc.
 - optional: code for exporting cases (PDF? HTML?)
 - optional: code for importing more 3rd party news data (from JSON? CSV?)
+
+## Use case
+Say I have an org whose job it is to pump out a bunch of analyses based on their political and security expertise - and we already have news data streaming in every so often from 3rd party sources. We would like a handy way to collaborate on "cases" (analyses, articles, not sure what to call the output), so that reading the data and then creating these outputs aren't done in random places that require switching tabs all the time and getting lost in other tools.
