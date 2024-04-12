@@ -11,3 +11,13 @@ A group can log in, receive a DB table's worth of news data (from 3rd party), an
 
 ## Use case
 Say I have an org whose job it is to pump out a bunch of analyses based on their political and security expertise - and we already have news data streaming in every so often from 3rd party sources. We would like a handy way to collaborate on "cases" (analyses, articles, not sure what to call the output), so that reading the data and then creating these outputs aren't done in random places that require switching tabs all the time and getting lost in other tools.
+
+## Setup & development
+### Database
+Fill out a new file `.env` according to the fields in the `.env.example` file.
+Install sql-migrate with your favourite package manager.
+
+Then run the command
+```bash
+export $(grep -v '^#' .env | xargs) && sql-migrate up
+```
